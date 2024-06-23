@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #ed66c7;
+    --second-color: #95c7ee;
+    --text-color: #1b1b1b;
+    --bg-color: #fff; 
+}
+
+section {
+    padding-top: 6rem;
+}
+
+body.bg-custom {
+    background-color: #FFFAF4; /* Ganti dengan warna yang diinginkan */
+}
+/* navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    padding: 8px 17px;
+}
+
+.navbar a:hover {
+    background: var(--main-color);
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.header-icon {
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+.header-icon .bx {
+    color: var(--text-color);
+}
+
+.header-icon .bx:hover {
+    color: var(--main-color);
+}
+
+/* button back */
+.back-button-container {
+    position: fixed;
+    top: 100px; /* Adjust based on the height of the navbar */
+    left: 30px;
+    z-index: 10;
+}
+
+.back-button-container i {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-button-container i:hover {
+    color: #000;
+}
+
+/* card */
+.heading {
+    text-align: center;
+}
+
+.heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.listmusic-container .music-container {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.listmusic-container .music-container .box {
+    height: 10rem;
+    width: 80%;
+    /* display: flex; */
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem #959595;
+    overflow: hidden;
+    margin: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* padding: 10px; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listmusic-container .music-container .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.listmusic-container .music-container .img-music {
+    height: 100%;
+    /* width: 25%; */
+}
+
+.listmusic-container .music-container .img-music img {
+    height: 100%;
+    /* width: 100%; */
+}
+
+
+
+.music-info {
+    flex-grow: 1;
+    margin-left: 2rem;
+}
+
+.music-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.music-subtitle {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.play-icon {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 1.5rem;
+}
+
+.play-icon:hover {
+    color: #000;
+}

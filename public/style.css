@@ -1,0 +1,322 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    /* background-color: #FFFAF4; */
+}
+
+:root {
+    --main-color: #ed66c7;
+    --second-color: #95c7ee;
+    --text-color: #1b1b1b;
+    --bg-color: #fff;
+
+    /* Box Shadow */
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+    --box-shadow-hover: 4px 4px 15px 6px rgb(14 55 54 / 25%);
+}
+
+section {
+    padding: 10px 100px;
+}
+
+body {
+    background-color: #FFFAF4;
+}
+
+body.bg-custom {
+    background-color: #FFFAF4; /* Ganti dengan warna yang diinginkan */
+}
+
+/* navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    padding: 8px 17px;
+}
+
+.navbar a:hover {
+    background: var(--main-color);
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.header-icon {
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+.header-icon .bx {
+    color: var(--text-color);
+}
+
+.header-icon .bx:hover {
+    color: var(--main-color);
+}
+
+/* home */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    /* background: url('background.jpg') no-repeat; */
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, auto));
+    align-items: center;
+    gap: 2rem;    
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.home-text p {
+    font-size: 0.938rem;
+    color: var(--text-color);
+    margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 0.3rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #ef93f2;
+}
+
+img {
+    width: 100%;
+}
+
+/* menu */
+
+.heading {
+    text-align: center;
+}
+
+.heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-container .box {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.menu-container .box:hover {
+    box-shadow: var(--box-shadow-hover); /* Ganti bayangan saat hover */
+    transform: translateY(-5px); /* Tambahkan efek hover untuk sedikit mengangkat kartu */
+}
+
+.menu-container .box a {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: inherit; /* Mengatur warna teks pada tautan sama dengan elemen induk */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memusatkan konten secara horizontal */
+}
+
+.menu-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    /* background: #f1f1f1; */
+    border-radius: 0.5rem;
+}
+
+.menu-container .box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    margin: 0.5rem 0 0.5rem;
+    object-position: center;
+    text-align: center;
+}
+
+.menu-container .box .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* option */
+.heading {
+    text-align: center;
+}
+
+.heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.option-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+   
+}
+
+
+
+.option-container .box {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.option-container .box:hover {
+    box-shadow: var(--box-shadow-hover); /* Ganti bayangan saat hover */
+    transform: translateY(-5px); /* Tambahkan efek hover untuk sedikit mengangkat kartu */
+}
+
+.option-container .box a {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: inherit; /* Mengatur warna teks pada tautan sama dengan elemen induk */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memusatkan konten secara horizontal */
+}
+
+.option-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    /* background: #f1f1f1; */
+    border-radius: 0.5rem;
+}
+
+.option-container .box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    margin: 0.5rem 0 0.5rem;
+    object-position: center;
+    text-align: center;
+}
+
+.option-container .box .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* button back */
+.back-button-container {
+    position: fixed;
+    top: 100px; /* Adjust based on the height of the navbar */
+    left: 30px;
+    z-index: 10;
+}
+
+.back-button-container i {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-button-container i:hover {
+    color: #000;
+}
+
