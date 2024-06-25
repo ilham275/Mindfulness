@@ -9,8 +9,9 @@
 
     <div class="container">
         <!-- Navbar -->
+    </div>
 
-
+        <main>
         <!-- Home -->
         <section class="home" id="home">
             <div class="home-text">
@@ -33,13 +34,13 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="menu.html">
+                    <a href="{{ route('tosaran') }}">
                         <img src="{{ asset('img/menu3.jpg') }}" alt="">
                         <h3>Saran Kegiatan</h3>
                     </a>
                 </div>
                 <div class="box">
-                    <a href="#">
+                    <a href="{{ route('tojurnal') }}">
                         <img src="{{ asset('img/menu2.jpg') }}" alt="">
                         <h3>Your Journal</h3>
                     </a>
@@ -52,6 +53,7 @@
                 </div>
             </div>
         </section>
-    </div>
+        </main>
+    
 
 @endsection

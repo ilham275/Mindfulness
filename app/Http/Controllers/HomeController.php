@@ -23,6 +23,33 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
+    }
+
+    public function tosaran(){
+        return view('saran');
+    }
+    public function tolistmus(){
+        return view('listmusic');
+    }
+    
+    public function toplaymuc(){
+        return view('playermusic');
+    }
+
+    public function totimer(){
+        return view('timer');
+    }
+
+    public function tojurnal(){
+        return view('jurnal');
+    }
+
+    public function createjurnal(){
+        return view('bikinjurnal');
+    }
+
+    public function tidurcukup(){
+        return view('waktutidur');
     }
 }

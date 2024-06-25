@@ -20,11 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/saran', [App\Http\Controllers\HomeController::class, 'tosaran'])->name('tosaran');
+Route::get('/listmusic', [App\Http\Controllers\HomeController::class, 'tolistmus'])->name('tolis');
+Route::get('/playmusic', [App\Http\Controllers\HomeController::class, 'toplaymuc'])->name('playmus');
+Route::get('/timer', [App\Http\Controllers\HomeController::class, 'totimer'])->name('totimer');
+Route::get('/jurnal', [App\Http\Controllers\HomeController::class, 'tojurnal'])->name('tojurnal');
+Route::get('/createjurnal', [App\Http\Controllers\HomeController::class, 'createjurnal'])->name('bikinjurnal');
+Route::get('/tidurcukup', [App\Http\Controllers\HomeController::class, 'tidurcukup'])->name('tidurcukup');
