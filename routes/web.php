@@ -27,3 +27,8 @@ Route::get('/timer', [App\Http\Controllers\HomeController::class, 'totimer'])->n
 Route::get('/jurnal', [App\Http\Controllers\HomeController::class, 'tojurnal'])->name('tojurnal');
 Route::get('/createjurnal', [App\Http\Controllers\HomeController::class, 'createjurnal'])->name('bikinjurnal');
 Route::get('/tidurcukup', [App\Http\Controllers\HomeController::class, 'tidurcukup'])->name('tidurcukup');
+Route::get('/isiform', [App\Http\Controllers\HomeController::class, 'isiform'])->name('isiform');
+Route::get('/menukesehatan', [App\Http\Controllers\HomeController::class, 'menukesehatan'])->name('menukesehatan');
+Route::get('/scoreview', [App\Http\Controllers\HomeController::class, 'scoreview'])->name('scoreview');
+Route::get('/bajur', [App\Http\Controllers\HomeController::class, 'bajur'])->name('bajur');
+

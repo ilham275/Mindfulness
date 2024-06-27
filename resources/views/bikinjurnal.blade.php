@@ -3,6 +3,7 @@
 
 @section('style')
 <link rel="stylesheet" href="waktutidur.css">
+<link rel="stylesheet" href="style.css">
 @endsection
 
 @section('content')
@@ -13,13 +14,20 @@
 
         <main>
         <div class="container-content">
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, justo vitae sodales efficitur, augue risus pharetra dolor, a vestibulum orci lorem sit amet odio.</p>
-                
-                <img src="https://via.placeholder.com/400" alt="Contoh Gambar">
-                
-                <p>Quisque fringilla lacus nec arcu fermentum, a pretium lorem pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce ut ligula leo.</p>
+            <div class="heading">
+                <h2>Jurnalku</h2>
             </div>
+            <div class="content">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Judul</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Isi Jurnal</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+            </div>
+            <a href="#" class="btn-save">Save</a>
         </div>
         </main>
      

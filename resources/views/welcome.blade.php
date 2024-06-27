@@ -28,7 +28,7 @@
         <section class="menu" id="menu">
             <div class="menu-container">
                 <div class="box">
-                    <a href="#">
+                    <a href="{{ route('menukesehatan')}}">
                         <img src="{{ asset('img/menu1.jpg') }}" alt="">
                         <h3>Ukur Keadaan Mental</h3>
                     </a>
@@ -46,7 +46,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="#">
+                    <a href="{{ route('bajur') }}">
                         <img src="{{ asset('img/menu4.jpg') }}" alt="">
                         <h3>Baca Journal</h3>
                     </a>

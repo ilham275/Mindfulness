@@ -52,4 +52,20 @@ class HomeController extends Controller
     public function tidurcukup(){
         return view('waktutidur');
     }
+
+    public function isiform(){
+        return view('isiform');
+    }
+
+    public function menukesehatan(){
+        return view('menukesehatan');
+    }
+
+    public function scoreview(){
+        return view('scoreview');
+    }
+
+    public function bajur(){
+        return view('bajur');
+    }
 }
