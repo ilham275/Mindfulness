@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController as HC;
+use App\Http\Controllers\YourJurnalController as YC;
+use App\Http\Controllers\KesehatanController as KC;
+use App\Http\Controllers\AdminController as AC;
+use App\Http\Controllers\SongController as SC;
+use App\Http\Controllers\JournalController as JC;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,17 +25,26 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::resource('yourjurnal', YC::class);
+Route::resource('kesehatan', KC::class);
+Route::resource('admin', AC::class);
+Route::resource('kesehatan', KC::class);
+Route::resource('song', SC::class);
+Route::resource('journal', JC::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/saran', [App\Http\Controllers\HomeController::class, 'tosaran'])->name('tosaran');
-Route::get('/listmusic', [App\Http\Controllers\HomeController::class, 'tolistmus'])->name('tolis');
-Route::get('/playmusic', [App\Http\Controllers\HomeController::class, 'toplaymuc'])->name('playmus');
-Route::get('/timer', [App\Http\Controllers\HomeController::class, 'totimer'])->name('totimer');
-Route::get('/jurnal', [App\Http\Controllers\HomeController::class, 'tojurnal'])->name('tojurnal');
-Route::get('/createjurnal', [App\Http\Controllers\HomeController::class, 'createjurnal'])->name('bikinjurnal');
-Route::get('/tidurcukup', [App\Http\Controllers\HomeController::class, 'tidurcukup'])->name('tidurcukup');
-Route::get('/isiform', [App\Http\Controllers\HomeController::class, 'isiform'])->name('isiform');
-Route::get('/menukesehatan', [App\Http\Controllers\HomeController::class, 'menukesehatan'])->name('menukesehatan');
-Route::get('/scoreview', [App\Http\Controllers\HomeController::class, 'scoreview'])->name('scoreview');
-Route::get('/bajur', [App\Http\Controllers\HomeController::class, 'bajur'])->name('bajur');
+
+
+Route::get('/score', [KC::class, 'read'])->name('readscore');
+Route::get('/home', [HC::class, 'index'])->name('home');
+Route::get('/saran', [HC::class, 'tosaran'])->name('tosaran');
+Route::get('/listmusic', [HC::class, 'tolistmus'])->name('tolis');
+Route::get('/playmusic/{id}', [HC::class, 'toplaymuc'])->name('playmusic');
+Route::get('/timer', [HC::class, 'totimer'])->name('totimer');
+Route::get('/jurnal', [HC::class, 'tojurnal'])->name('tojurnal');
+Route::get('/createjurnal', [HC::class, 'createjurnal'])->name('bikinjurnal');
+Route::get('/tidurcukup', [HC::class, 'tidurcukup'])->name('tidurcukup');
+Route::get('/isiform', [HC::class, 'isiform'])->name('isiform');
+// Route::get('/menukesehatan', [HC::class, 'menukesehatan'])->name('menukesehatan');
+Route::get('/scoreview', [HC::class, 'scoreview'])->name('scoreview');
+Route::get('/bajur', [HC::class, 'bajur'])->name('bajur');
 

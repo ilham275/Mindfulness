@@ -28,7 +28,7 @@
         <section class="menu" id="menu">
             <div class="menu-container">
                 <div class="box">
-                    <a href="{{ route('menukesehatan')}}">
+                    <a href="{{ route('kesehatan.index')}}">
                         <img src="{{ asset('img/menu1.jpg') }}" alt="">
                         <h3>Ukur Keadaan Mental</h3>
                     </a>
@@ -40,7 +40,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="{{ route('tojurnal') }}">
+                    <a href="{{ route('yourjurnal.index') }}">
                         <img src="{{ asset('img/menu2.jpg') }}" alt="">
                         <h3>Your Journal</h3>
                     </a>
@@ -54,6 +54,6 @@
             </div>
         </section>
         </main>
-    
+
 
 @endsection

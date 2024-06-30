@@ -12,26 +12,26 @@ const image = document.getElementById('cover'),
 
 const music = new Audio();
 
-const songs = [
-    {
-        path: 'assets/1.mp3',
-        displayName: 'The Charmer\'s Call',
-        cover: 'img/music2.jpg',
-        artist: 'Hanu Dixit',
-    },
-    {
-        path: 'assets/2.mp3',
-        displayName: 'You Will Never See Me Coming',
-        cover: 'img/music2.jpg',
-        artist: 'NEFFEX',
-    },
-    {
-        path: 'assets/3.mp3',
-        displayName: 'Intellect',
-        cover: 'img/music2.jpg',
-        artist: 'Yung Logos',
-    }
-];
+// const songs = [
+//     {
+//         path: 'assets/1.mp3',
+//         displayName: 'The Charmer\'s Call',
+//         cover: 'img/music2.jpg',
+//         artist: 'Hanu Dixit',
+//     },
+//     {
+//         path: 'assets/2.mp3',
+//         displayName: 'You Will Never See Me Coming',
+//         cover: 'img/music2.jpg',
+//         artist: 'NEFFEX',
+//     },
+//     {
+//         path: 'assets/3.mp3',
+//         displayName: 'Intellect',
+//         cover: 'img/music2.jpg',
+//         artist: 'Yung Logos',
+//     }
+// ];
 
 let musicIndex = 0;
 let isPlaying = false;
@@ -100,3 +100,27 @@ music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
 
 loadMusic(songs[musicIndex]);
+
+
+                        document.getElementById('mentalHealthForm').addEventListener('submit', function(event) {
+                            event.preventDefault(); // Prevent default form submission
+
+                            // Calculate total score
+                            let totalScore = 0;
+                            const questions = ['interest', 'mood', 'sleep', 'oversleep', 'tired', 'appetite', 'overeating', 'self_esteem', 'concentration', 'restlessness', 'self_harm'];
+                            questions.forEach(question => {
+                                const radios = document.getElementsByName(question);
+                                for (const radio of radios) {
+                                    if (radio.checked) {
+                                        totalScore += parseInt(radio.value);
+                                        break;
+                                    }
+                                }
+                            });
+
+                            // Set total score to hidden input
+                            document.getElementById('totalScore').value = totalScore;
+
+                            // Submit the form
+                            this.submit();
+                        });

@@ -189,7 +189,7 @@
 }
 
 .btn-custom {
-  background-color: #ed66c7;
+  background-color: #945ada;
   border-color: #ed66c7;
   color: white; /* Change this if you want a different text color */
 }
@@ -2972,7 +2972,7 @@ textarea.form-control-lg {
           user-select: none;
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
-  /* background-color: #ed66c7; */
+  background-color: #0346fc;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2982,7 +2982,7 @@ textarea.form-control-lg {
 }
 .btn:hover {
   color: var(--bs-btn-hover-color);
-  background-color: #ef93f2;
+  background-color: #925bf0;
   border-color: var(--bs-btn-hover-border-color);
 }
 .btn-check + .btn:hover {

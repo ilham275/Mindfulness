@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Journal;
+use App\Models\SongModel;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -26,46 +28,61 @@ class HomeController extends Controller
         return view('welcome');
     }
 
-    public function tosaran(){
+    public function tosaran()
+    {
         return view('saran');
     }
-    public function tolistmus(){
-        return view('listmusic');
-    }
-    
-    public function toplaymuc(){
-        return view('playermusic');
+    public function tolistmus()
+    {
+        $songs = SongModel::all();
+        return view('listmusic', compact('songs'));
     }
 
-    public function totimer(){
+    public function toplaymuc($id)
+    {
+        $song = SongModel::find($id);
+
+        if (!$song) {
+            return response()->json(['error' => 'Song not found.'], 404);
+        }
+
+        return response()->json(['song' => $song]);
+    }
+
+    public function totimer()
+    {
         return view('timer');
     }
 
-    public function tojurnal(){
+    public function tojurnal()
+    {
         return view('jurnal');
     }
 
-    public function createjurnal(){
+    public function createjurnal()
+    {
         return view('bikinjurnal');
     }
 
-    public function tidurcukup(){
+    public function tidurcukup()
+    {
         return view('waktutidur');
     }
 
-    public function isiform(){
+    public function isiform()
+    {
         return view('isiform');
     }
 
-    public function menukesehatan(){
-        return view('menukesehatan');
-    }
 
-    public function scoreview(){
+    public function scoreview()
+    {
         return view('scoreview');
     }
 
-    public function bajur(){
-        return view('bajur');
+    public function bajur()
+    {
+        $data = Journal::all();
+        return view('bajur', compact('data'));
     }
 }

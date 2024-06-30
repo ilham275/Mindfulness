@@ -9,7 +9,7 @@
 
 
 <div class="container">
-    
+
     <!-- Music player -->
     <main class="py-4">
     <div class="background">
@@ -42,7 +42,7 @@
 </div>
 
 
-    
+
 
 @endsection
 
